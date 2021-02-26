@@ -8,4 +8,12 @@ console.log(btnsOpenModal);
 
 for (let i = 0; i < btnsOpenModal.length; i++) {
   console.log(btnsOpenModal[i].textContent);
+  btnsOpenModal[i].addEventListener('click', function () {
+    console.log('Button clicked');
+    modal.classList.remove('hidden');
+  });
 }
+
+modal.addEventListener('click', function () {
+  modal.classList.add('hidden');
+});
